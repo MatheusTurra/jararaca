@@ -1,3 +1,4 @@
+"""This module will handle the core OCR processing of images."""
 try:
     from PIL import Image
 except ImportError:
