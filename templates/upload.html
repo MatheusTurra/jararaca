@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jararaca - Upload de imagem</title>
+    </head>
+    <body>
+        {% if msg%}
+        <h1> {{ msg }}</h1>
+        {% endif %}
+
+        <h1>Selecione uma imagem</h1>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <p>
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </p>
+        </form>
+        <h1>Resultado</h1>
+        {% if img_src %}
+            <img src='{{ img_src}}'>
+        {% endif %}
+        {% if extracted_text %}
+            <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p> 
+            
+        {% else %}
+            <p> O texto da imagem vai aparecer aqui </p>
+        {% endif %}
+    </body>
+</html>
