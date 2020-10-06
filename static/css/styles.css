@@ -1,6 +1,10 @@
 :root{
-    --color-background: #e8eddf;
+    --color-background: #dee2ff;
+    --color-background-secondary: #ffffff;
     --color-primary:  #13aa52;
+    --color-primary-dark: #297045;
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #116149;
 }
 
 body {

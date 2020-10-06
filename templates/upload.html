@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Jararaca - Upload de imagem</title>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
     </head>
@@ -13,37 +12,61 @@
                 <h2 id="navbar-title">
                     Jararaca
                 </h2>
-                <div id="logo">
+                <div class="logo">
                     <img id="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
                 </div>
             </div>
         </nav>
 
-        {% if msg%}
-        <h1> {{ msg }}</h1>
-        {% endif %}
-        <div>     
-            <div class="title">
-                <h3>Selecione uma imagem</h3>
+        <div class='main-container'>     
+            <div class="content">   
+                {% if msg%}
+                <div id="message">
+                    <h3> {{ msg }}</h3>
+                </div>
+                {% endif %}
             </div>
-            <form method="POST" enctype="multipart/form-data">
-                <p>
-                    <input type="file" name="file">
-                    <input type="submit" value="Upload">
-                </p>
-            </form>
-        
-            <h3 class="title">Resultado</h3>
-            {% if img_src %}
-                <img src='{{ img_src}}'>
-            {% endif %}
-            {% if extracted_text %}
-                <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p> 
-                
-            {% else %}
-                <p> O texto da imagem vai aparecer aqui </p>
-            {% endif %}
+            <div class="content">
+                <div class="title">
+                    <h3>Selecione uma imagem</h3>
+                </div>
+                <form method="POST" enctype="multipart/form-data">
+                     <p>  
+                        <label for="file-button" class="custom-button">
+                            <input id="file-button" type="file" name="file">
+                            Escolha o arquivo
+                        </label>
+                        <label for="submit" class="custsom-button">
+                            <input id="submit-button" type="submit" value="Enviar"> 
+                                                       
+                        </label>
+                    </p>    
+                </form>
+            </div>
+            <div class='content'>
+                <h3 class="title">Resultado</h3>
+                {% if img_src %}
+                    <div id="result-image">
+                        <img src='{{ img_src}}'>
+                    </div>
+                {% endif %}
+                {% if extracted_text %}
+                    <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p> 
+                    
+                {% else %}
+                    <p> O texto da imagem vai aparecer aqui </p>
+                {% endif %}
+            </div>
         </div>
-
+        <footer class=footer>
+            <div id="footer-container">
+                <div id="logo">
+                    <img class="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
+                </div>
+                <p>&copy Unip APS 2020  <br>
+                    Matheus Farisco Turra D720040 ...
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
