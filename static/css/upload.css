@@ -1,0 +1,38 @@
+#navbar {
+    margin: 0px;
+    border-bottom: 0.5vh solid var(--color-primary);
+    background-color: #ffffff;
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 10px 30px rgba(0,0,0,0.08); z-index: 1000000;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar-title {
+    order: 1;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text-title);
+    margin-right: 1vh;
+}
+
+
+
+ #logo {
+    order: 2;
+    align-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}

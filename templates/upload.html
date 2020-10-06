@@ -2,29 +2,48 @@
 <html>
     <head>
         <title>Jararaca - Upload de imagem</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
     </head>
     <body>
+
+        <div id='navbar'>
+            <div id='logo-container'>
+                <h2 id="navbar-title">
+                    Jararaca
+                </h2>
+                <div id="logo">
+                    <img id="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
+                </div>
+            </div>
+        </nav>
+
         {% if msg%}
         <h1> {{ msg }}</h1>
         {% endif %}
-
-        <h1>Selecione uma imagem</h1>
+        <div>     
+            <div class="title">
+                <h3>Selecione uma imagem</h3>
+            </div>
+            <form method="POST" enctype="multipart/form-data">
+                <p>
+                    <input type="file" name="file">
+                    <input type="submit" value="Upload">
+                </p>
+            </form>
         
-        <form method="POST" enctype="multipart/form-data">
-            <p>
-                <input type="file" name="file">
-                <input type="submit" value="Upload">
-            </p>
-        </form>
-        <h1>Resultado</h1>
-        {% if img_src %}
-            <img src='{{ img_src}}'>
-        {% endif %}
-        {% if extracted_text %}
-            <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p> 
-            
-        {% else %}
-            <p> O texto da imagem vai aparecer aqui </p>
-        {% endif %}
+            <h3 class="title">Resultado</h3>
+            {% if img_src %}
+                <img src='{{ img_src}}'>
+            {% endif %}
+            {% if extracted_text %}
+                <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p> 
+                
+            {% else %}
+                <p> O texto da imagem vai aparecer aqui </p>
+            {% endif %}
+        </div>
+
     </body>
 </html>
