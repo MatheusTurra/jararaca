@@ -34,10 +34,7 @@ def upload_page():
                                    msg='Processada com sucesso',
                                    extracted_text=extracted_text,
                                    img_src=UPLOAD_FOLDER + file.filename)
-    elif request.method == 'GET':
-        return render_template('upload.html')
-    else:
-        return render_template('upload.html', msg='Metodo invalido')
+    return render_template('upload.html')
 
 
 if __name__ == '__main__':
