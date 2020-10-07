@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jararaca - Upload de imagem</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+
+<body>
+
+    <nav id='navbar'>
+        <div id='logo-container'>
+            <h2 id="navbar-title">
+                <a href="{{ url_for('home_page')}}"> Jararaca </a>
+            </h2>
+            <div class="logo">
+                <a href="{{ url_for('home_page')}}">
+                    <img id="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class='main-container'>
+        <div class="content">
+            {% if msg%}
+            <div id="message">
+                <h3> {{ msg }}</h3>
+            </div>
+            {% endif %}
+        </div>
+        <div class="content">
+            <div class="title">
+                <h3>Selecione uma imagem</h3>
+            </div>
+            <form method="POST" enctype="multipart/form-data">
+                <p>
+                    <label for="file-button" class="custom-button">
+                        <input id="file-button" type="file" name="file">
+                        Escolha o arquivo
+                    </label>
+                    <label for="submit" class="custsom-button">
+                        <input id="submit-button" type="submit" value="Enviar">
+
+                    </label>
+                </p>
+            </form>
+        </div>
+        <div class='content'>
+            <h3 class="title">Resultado</h3>
+            {% if img_src %}
+            <div id="result-image">
+                <img src='{{ img_src}}'>
+            </div>
+            {% endif %} {% if extracted_text %}
+            <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p>
+
+            {% else %}
+            <p> O texto da imagem vai aparecer aqui </p>
+            {% endif %}
+        </div>
+    </div>
+    <footer class=footer>
+        <div id="footer-container">
+            <div id="logo">
+                <img src="{{ url_for('static', filename='icons/logo.svg')}}">
+            </div>
+            <p>&copy Unip APS 2020 <br> Matheus Farisco Turra D720040 ...
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
