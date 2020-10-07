@@ -7,13 +7,15 @@
     </head>
     <body>
 
-        <div id='navbar'>
+        <nav id='navbar'>
             <div id='logo-container'>
                 <h2 id="navbar-title">
-                    Jararaca
+                    <a href="{{ url_for('home_page')}}"> Jararaca </a>
                 </h2>
                 <div class="logo">
+                <a href="{{ url_for('home_page')}}"> 
                     <img id="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
+                </a>
                 </div>
             </div>
         </nav>
@@ -61,7 +63,7 @@
         <footer class=footer>
             <div id="footer-container">
                 <div id="logo">
-                    <img class="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
+                    <img src="{{ url_for('static', filename='icons/logo.svg')}}">
                 </div>
                 <p>&copy Unip APS 2020  <br>
                     Matheus Farisco Turra D720040 ...

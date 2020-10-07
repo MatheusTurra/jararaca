@@ -15,6 +15,11 @@
     align-items: center;
 }
 
+#logo-container a {
+    text-decoration: none;
+    color: #000000;
+}
+
 #navbar-title {
     order: 1;
     font-family: 'Roboto', sans-serif;
@@ -22,7 +27,7 @@
     margin-right: 1vh;
 }
 
- .logo {
+ #logo {
     order: 2;
     align-content: center;
     width: 60px;
@@ -52,7 +57,7 @@ p {
     margin-top: 4rem;
     margin-right: 7rem;
     margin-left: 7rem;
-    margin-bottom: -4rem;
+    margin-bottom: -6rem;
     padding: 1rem;
     background-color: var(--color-background-secondary);
     border-radius: 1rem;
@@ -88,6 +93,7 @@ p {
 }
 
 #submit-button {
+    margin-top: 1rem;
     background-color: var(--color-primary);
     border: none;
     border-radius: 0.2rem;
@@ -122,12 +128,13 @@ p {
     margin: 1em;
 }
 
-#footer-container .logo {
+#footer-container #logo {
     order: 1;
     margin-right: 2vh;
 }
 
 .footer #footer-container p {
+    order: 2;
     font-size: 0.8em;
     font-family: 'Open Sans', sans-serif;
 }
