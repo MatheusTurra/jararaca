@@ -53,8 +53,7 @@
             <div id="result-image">
                 <img src='{{ img_src}}'>
             </div>
-            {% endif %}
-            {% if extracted_text %}
+            {% endif %} {% if extracted_text %}
             <p>O texto da imagem enviada é : <b> {{ extracted_text }}</b></p>
 
             {% else %}
@@ -67,8 +66,7 @@
             <div id="logo">
                 <img src="{{ url_for('static', filename='icons/logo.svg')}}">
             </div>
-            <p>&copy Unip APS 2020 <br>
-                Matheus Farisco Turra D720040 ...
+            <p>&copy Unip APS 2020 <br> Matheus Farisco Turra D720040 ...
             </p>
         </div>
     </footer>
