@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jararaca</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-  </head>
-  <body>
-    <nav id='navbar'>
-      <div id='logo-container'>
-          <h2 id="navbar-title">
-              Jararaca
-          </h2>
-          <div class="logo">
-              <img id="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
-          </div>
-      </nav>
-      <div id="container-image">
-        <div id="main-container">
-          <h2 class=title>Desenhado para facilitar o trabalho de </br> ONGs Brasileiras</h2>
-            <div id="text">
-              <p>ONGs de proteção ao Pantanal ou à Floresta Amazônica,  </br> terminar 
-                suas declarações fiscais mais rápido e direcionar os seus </br> esforços ao que realmente interessa, 
-                a proteção da fauna e flora do Brasil!
-              </p>
-            </div>
-            <button class="button"><a href="{{ url_for('upload_page')}}">Comece agora !</a></button>
-        </div>
-      </div>
 
-      <div class="container">
+<head>
+  <title>Jararaca</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <nav id='navbar'>
+    <div id='logo-container'>
+      <h2 id="navbar-title">
+        Jararaca
+      </h2>
+      <div class="logo">
+        <img id="logo" src="{{ url_for('static', filename='icons/logo.svg')}}">
       </div>
   </nav>
-  </body>
+  <div id="container-image">
+    <div id="main-container">
+      <h2 class=title>Desenhado para facilitar o trabalho de </br> ONGs Brasileiras</h2>
+      <div id="text">
+        <p>ONGs de proteção ao Pantanal ou à Floresta Amazônica, </br> terminar
+          suas declarações fiscais mais rápido e direcionar os seus </br> esforços ao que realmente interessa,
+          a proteção da fauna e flora do Brasil!
+        </p>
+      </div>
+      <button class="button"><a href="{{ url_for('upload_page')}}">Comece agora !</a></button>
+    </div>
+  </div>
+
+  <div class="container">
+  </div>
+  </nav>
+</body>
+
 </html>

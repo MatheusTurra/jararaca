@@ -1,7 +1,7 @@
-:root{
+:root {
     --color-background: #dee2ff;
     --color-background-secondary: #ffffff;
-    --color-primary:  #13aa52;
+    --color-primary: #13aa52;
     --color-primary-dark: #297045;
     --text-color-primary: #ffffff;
     --text-color-secondary: #116149;
@@ -11,4 +11,4 @@ body {
     background-color: var(--color-background);
     margin: 0;
     padding: 0;
-} 
+}
