@@ -27,7 +27,7 @@ def upload_page():
             return render_template('upload.html', msg='Nenhum arquivo selecionado')
         if file and allowed_file(file.filename):
             extracted_text = ocr_core(file)
-           ## print(UPLOAD_FOLDER + file.filename)
+            # print(UPLOAD_FOLDER + file.filename)
             return render_template('upload.html',
                                     msg= 'Processada com sucesso',
                                     extracted_text=extracted_text,
