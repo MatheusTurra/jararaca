@@ -1,4 +1,3 @@
-import os
 from flask import Flask, render_template, request
 
 from ocr_core import ocr_core
