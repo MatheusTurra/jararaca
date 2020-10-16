@@ -5,6 +5,7 @@
     <title>Jararaca - Upload de imagem</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/upload.js') }}"></script>
 </head>
 
 <body>
@@ -31,10 +32,13 @@
             {% endif %}
         </div>
         <div class="content">
+            <div id="container-file-message">
+                <p id="file-message">Mensagem escolhida !!!</p>
+            </div>
             <div class="title">
                 <h3>Selecione uma imagem</h3>
             </div>
-            <form method="POST" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data" onchange="teste()">
                 <p>
                     <label for="file-button" class="custom-button">
                         <input id="file-button" type="file" name="file">
@@ -66,7 +70,11 @@
             <div id="logo">
                 <img src="{{ url_for('static', filename='icons/logo.svg')}}">
             </div>
-            <p>&copy Unip APS 2020 <br> Matheus Farisco Turra D720040 ...
+            <p>&copy Unip APS 2020 <br> Matheus Farisco Turra D720040 
+                Rodrigo Nunes Santos D57ABD1 <br>
+                            Filipe Xavier Oliveira D563EH6
+                            Leonardo Rodrigues de Oliveira D6733H-5 <br>
+                            Ruan de Souza Pimentel N3343B0
             </p>
         </div>
     </footer>
