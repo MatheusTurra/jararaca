@@ -1,2 +1,3 @@
 jararaca/static/* linguist-vendored
 *.css linguist-detectable=false
+*.html linguist-detectable=false
